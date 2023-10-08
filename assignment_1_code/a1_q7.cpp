@@ -67,3 +67,7 @@ It can be used in pattern design.
 
 It can be used in pattern design.
 */
+
+int main(){
+    ;
+}
