@@ -10,7 +10,14 @@ class weather_report
     int amount_snow;
 
 public:
-    weather_report();
+    weather_report()
+    {
+        day_of_month = "Sunday";
+        hightemp = 69;
+        lowtemp = 30;
+        amount_rain = 5;
+        amount_snow = 1;
+    }
 
     void getval()
     {
@@ -44,14 +51,7 @@ public:
     }
 };
 
-weather_report::weather_report()
-{
-    day_of_month = "Sunday";
-    hightemp = 69;
-    lowtemp = 30;
-    amount_rain = 5;
-    amount_snow = 1;
-}
+// weather_report::
 
 int main(void)
 {
