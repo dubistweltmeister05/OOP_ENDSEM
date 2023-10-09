@@ -27,10 +27,10 @@ int main(void)
 {
 
     str s1(" hello "), s2(" world "), s3;
-    // s1.display();
-    // s2.display();
+    s1.display();
+    s2.display();
 
-    s1 + s1;
+    s1 + s2;
 
     s2.display();
 
