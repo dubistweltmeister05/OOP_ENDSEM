@@ -5,27 +5,24 @@ class base
 {
 public:
     int a = 69;
-    void greet()
-    {
-        cout << "Hello " << a << endl;
-    }
+    virtual void show() {}
 };
 
+;
 class derived : public base
 {
 public:
     int b = 420;
-    void greet()
+    void show()
     {
-        cout << "Hello " << b << endl;
+        cout << "This is the value of the derived class " << b << endl;
     }
 };
 int main(void)
 {
-    base x;
-    x.greet();
-
-    derived y;
-    y.greet();
+    base *ptr;
+    derived d;
+    ptr = &d;
+    ptr->show();
     return 0;
 }
