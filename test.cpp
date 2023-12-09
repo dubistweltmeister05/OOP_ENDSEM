@@ -1,32 +1,42 @@
 #include <iostream>
-#include <conio.h>
 using namespace std;
 
+class time
+{
+public:
+    int hrs = 0;
+    int mins = 0;
+    int secs = 0;
+
+    time(int a, int b, int c)
+    {
+        hrs = a;
+        mins = b;
+        secs = c;
+    }
+    time() {}
+
+    void show()
+    {
+        cout << "THe time is " << hrs << " hours " << mins << " minutes " << secs << " Seconds " << endl;
+    }
+
+    time operator+(time &t1)
+    {
+        this->hrs += t1.hrs;
+        this->mins += t1.mins;
+        this->secs += t1.secs;
+    }
+};
 int main(void)
 {
+    time t1(1, 2, 3), t2(4, 5, 6);
 
-    try
-    {
-        char c;
-        cout << "Enter a character: ";
-        cin >> c;
+    t2 + t1;
 
-        if (isdigit(c))
-        {
-            int x = c;
-            throw int(x);
-        }
+    time t3 = t2;
 
-        if (isalpha(c))
-            throw(c);
-        return 0;
-    }
-    catch (int x)
-    {
-        cout << "Caught exception : int type ";
-    }
-    catch (char c)
-    {
-        cout << "Caught exception : char type ";
-    }
+    t3.show();
+
+    return 0;
 }

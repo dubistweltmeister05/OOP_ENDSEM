@@ -22,7 +22,11 @@ public:
 int main(void)
 {
     base *ptr;
+    base b;
     derived d;
+    // derived *ptr_d;
+    // ptr_d = &b;
+    // ptr_d->display();
     ptr = &d;
     ptr->display();
     return 0;

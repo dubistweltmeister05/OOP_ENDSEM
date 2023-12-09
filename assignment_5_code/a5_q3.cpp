@@ -13,12 +13,14 @@ public:
     int b = 420;
     void show()
     {
-        cout << "This is the value of the derived class " << b << endl;
+        cout << "This is the value of the derived class " << endl
+             << b << endl;
     }
 };
 int main(void)
 {
     base *ptr;
+    // base b;
     derived d;
     ptr = &d;
     ptr->show();

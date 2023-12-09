@@ -34,9 +34,11 @@ class derived1 : public base
 {
 public:
     int c;
-    void set_no(int q)
+    void set_no(int q, int r, int s)
     {
-        c = q;
+        a = q;
+        b = r;
+        c = s;
     }
     void display()
     {
@@ -50,9 +52,11 @@ class derived2 : private base
 {
 public:
     int c;
-    void set_nos(int u)
+    void set_nos(int u, int v, int w)
     {
-        c = u;
+        a = u;
+        b = v;
+        c = w;
     }
     void display()
     {
@@ -63,19 +67,21 @@ public:
 };
 int main(void)
 {
-    // base a;
+    base a;
     // a.setData(2, 3);
     // a.getData();
-    // derived1 b(2, 3, 1);
-    // b.display();
-    // derived2 c(1, 2, 3);
-    // c.display();
-    // return 0;
+    derived1 b;
+    b.set_no(1, 2, 3);
+    b.display();
+    derived2 c;
+    c.set_nos(1, 2, 3);
+    c.display();
+    return 0;
     // cout << b.b;
 
-    derived1 d1;
-    d1.setData(1, 2);
-    d1.set_no(3);
-    d1.display();
-    return 0;
+    // derived1 d1;
+    // d1.setData(1, 2);
+    // d1.set_no(3);
+    // d1.display();
+    // return 0;
 }
