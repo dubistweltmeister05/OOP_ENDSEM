@@ -22,8 +22,8 @@ public:
 };
 int main(void)
 {
-    base x;
-    x.greet();
+    // base x;
+    // x.greet();
 
     derived y;
     y.greet();

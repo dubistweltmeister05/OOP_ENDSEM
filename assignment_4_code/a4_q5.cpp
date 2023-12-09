@@ -27,11 +27,11 @@ public:
     }
 };
 
-class a3 : public a1, public a2
+class a3 : public a2, public a1
 {
 public:
     int c = 3;
-    a3() : a2(), a1()
+    a3() : a2(),a1()
     {
         cout << "Constructor of a3" << endl
              << c << endl;

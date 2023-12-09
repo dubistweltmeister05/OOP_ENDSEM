@@ -20,7 +20,7 @@ public:
     }
     void show()
     {
-        cout << "The value of teh derived class is : " << b;
+        cout << "The value of the derived class is : " << b;
     }
 };
 int main(void)
