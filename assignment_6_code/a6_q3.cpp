@@ -6,9 +6,9 @@ class error
 {
 public:
     int a;
-    error(int a)
+    error(int x)
     {
-        this->a = a;
+        a = x;
     }
     error() {}
     void display()
@@ -16,7 +16,6 @@ public:
         cout << a;
     }
 };
-
 int main(void)
 {
     error e;
@@ -24,7 +23,7 @@ int main(void)
     {
         cout << "Press a key to test the exception" << endl;
         getch();
-        throw error(99);
+        throw error(69);
     }
     catch (error e)
     {

@@ -3,12 +3,15 @@ using namespace std;
 
 int main()
 {
-    int a = 10, b = 0, c;
+    int a = 10, c;
+    int b = 0;
     try
     {
         // if a is divided by b(which has a value 0);
         if (b == 0)
             throw(c);
+        if (b == 'x')
+            throw(b);
         else
             c = a / b;
     }
@@ -24,5 +27,5 @@ int main()
     {
         cout << "Caught exception : short type ";
     }
-    cout << "\n Hello";
+    // cout << "\n Hello";
 }
